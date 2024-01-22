@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend-программист</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body style="height: 100vh">
+<header>
+    <p>...Frontend_программист...</p>
+    <img class="logo" src="{% static 'images/logotip.png' %}">
+</header>
+<main>
+    <div class="body">
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li>
+                        <div><a href="/">Главная</a></div>
+                    </li>
+                    <li>
+                        <div><a href={% url 'demend' %}>Востребованность</a></div>
+                    </li>
+                    <li>
+                        <div><a href={% url 'geography' %}>География</a></div>
+                    </li>
+                    <li>
+                        <div style="border-radius: 0px 0px 25px 0px; background: rgba(77, 114, 77, 0.50); justify-content: center">
+                            <a style="color: #FFFFFF !important;" href={% url 'skills' %}>Навыки</a></div>
+                    </li>
+                    <li>
+                        <div><a href={% url 'lastVacancy' %}>Последние вакансии</a></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <br/>
+
+        <div class="home_text" style="top: 200px">
+            {% for data in context %}
+                <h1>{{ data.table_name }}</h1>
+                <div class="tables_skills">
+                    {{ data.table|safe }}
+                </div>
+                <br/>
+                <img class="skills_graph" src={{ data.graph_skills.url }}/>
+                
+                <div class="empty_skills"></div>
+            {% endfor %}
+            <br/>
+
+        </div>
+        <br/>
+
+    </div>
+</main>
+
+<footer style="top: 92.2%">
+    <p>Элшенхаб Шади Али Эльсайед АТ-03</p>
+</footer>
+</body>
+</html>

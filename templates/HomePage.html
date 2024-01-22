@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend-программист</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body style="height: 100vh">
+<header>
+    <p>...Frontend_программист...</p>
+    <img class="logo" src="{% static 'images/logotip.png' %}">
+</header>
+<main>
+    <div class="body">
+        <div class="input_group">
+            <div class="navigation" style="height: 100%">
+                <nav>
+                    <ul>
+                        <li>
+                            <div style="border-top: 1px solid #F5F5F5;border-right: 1px solid #F5F5F5;border-bottom: 1px solid #F5F5F5;border-left: 5px solid #F5F5F5;">
+                                <a href="/">Главная</a></div>
+                        </li>
+                        <li>
+                            <div><a href={% url 'demend' %}>Востребованность</a></div>
+                        </li>
+                        <li>
+                            <div><a href={% url 'geography' %}>География</a></div>
+                        </li>
+                        <li>
+                            <div><a href={% url 'skills' %}>Навыки</a></div>
+                        </li>
+                        <li>
+                            <div><a href={% url 'lastVacancy' %}>Последние вакансии</a></div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="home_text">
+                {% for context in context %}
+                    {{ context.content|safe }}
+
+
+                    <div class="empty"></div>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+<footer style="top: 92.3%">
+    <p>Элшенхаб Шади Али Эльсайед АТ-03</p>
+</footer>
+</body>
+</html>

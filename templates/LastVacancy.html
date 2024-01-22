@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend-программист</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body style="height: 250vh">
+<header>
+    <p>...Frontend_программист...</p>
+    <img class="logo" src="{% static 'images/logotip.png' %}">
+</header>
+<main>
+    <div class="body">
+        <div class="navigation" style="height: 250vh ">
+            <nav>
+                <ul>
+                    <li><div><a href="/">Главная</a></div></li>
+                    <li><div><a href={% url 'demend' %}>Востребованность</a></div></li>
+                    <li><div><a href={% url 'geography' %}>География</a></div></li>
+                    <li><div><a href={% url 'skills' %}>Навыки</a></div></li>
+                    <li><div style="border-radius: 0px 0px 25px 0px; background: rgba(77, 114, 77, 0.50); justify-content: center"><a style="color: #FFFFFF !important;" href={% url 'lastVacancy' %}>Последние вакансии</a></div></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="home_text">
+            <h1>Последние вакансии</h1>
+            <div class="empty_skills"></div>
+        </div>
+        <div class="LVtable" style="margin-left: 50px;">
+            <h2>Главная</h2>
+<h2>Востребованность</h2>
+<h2>География</h2>
+<h2>Навыки</h2>
+<h2>Последние вакансии</h2>
+
+<h3>Фронтенд-разработчик</h3>
+<p>Описание: Специалист, создающий пользовательский интерфейс для веб-приложений, обеспечивая удобство, эстетичность и хорошее взаимодействие.</p>
+<p>Навыки: ['HTML', 'CSS', 'JavaScript', 'Фреймворки и библиотеки', 'Базы данных', 'Дизайн и графика', 'SOLID и архитектурное проектирование']</p>
+
+<h3>Фронтенд-разработчик (PHP Laravel + Vue.js)</h3>
+<p>Описание: Мы - продукт в сфере оцифровки производства. Наша амбиция - оцифровать производственную отрасль, а и...</p>
+<p>Навыки: ['Laravel', 'PHP', 'Docker', 'PostgreSQL', 'REST', 'Redis', 'Vue']</p>
+
+<h3>Fullstack программист PHP, JS</h3>
+<p>Описание: Задачи: Разработка и сопровождение крупных web-порталов, строительство метавселенной Настройка интеграци...</p>
+<p>Навыки: ['1С-Битрикс']</p>
+        </div>
+    </div>
+</main>
+<footer style="top: 242%">
+    <p>Элшенхаб Шади Али Эльсайед АТ-03</p>
+</footer>
+</body>
+</html>
