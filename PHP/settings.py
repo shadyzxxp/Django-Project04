@@ -113,6 +113,8 @@ USE_I18N = True
 
 USE_TZ = True
 
+ALLOWED_HOSTS = ['start21.pythonanywhere.com']
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
