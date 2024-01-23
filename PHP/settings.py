@@ -128,6 +128,10 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+MEDIA_URL = '/home/shadyfront/Project04/static/images'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
